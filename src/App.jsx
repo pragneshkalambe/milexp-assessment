@@ -419,14 +419,12 @@ function App() {
           <table className="table-auto">
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Username</th>
+
                 <th>Name</th>
                 <th>Address</th>
-                <th>Birthdate</th>
-                <th>Email</th>
+                
                 <th>Accounts</th>
-                <th>Tier_And_Details</th>
+
 
               </tr>
             </thead>
@@ -434,13 +432,11 @@ function App() {
               {activeCustomers && (
                 activeCustomers.map((customer) => (
                   <tr key={customer._id}>
-                    <td>{customer._id}</td>
-                    <td>{customer.username}</td>
+
                     <td>{customer.name}</td>
                     <td>{customer.address}</td>
-                    <td>{customer.birthdate.toLocaleDateString()}</td>
 
-                    <td>{customer.email}</td>
+
                     <td style={{ whiteSpace: "nowrap", cursor: "pointer" }}>
                       {customer.accounts && customer.accounts.map((account) => (
                         <span key={account}
@@ -450,12 +446,7 @@ function App() {
                       ))}
                     </td>
 
-                    <td style={{ whiteSpace: "nowrap" }}>
-                      {customer.tier_and_details && Object.values(customer.tier_and_details)
-                        .map((item) => item.tier)
-                        .join(" | ")
-                      }
-                    </td>
+                    
                   </tr>
 
                 ))
