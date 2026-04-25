@@ -90,7 +90,7 @@ const transactionData = transactions.find(
 ```
 
 ---
-## Query : Transactions less than 5000
+## Query : query to list down account ids which has made at least one transaction below the amount 5000
 ```js
 db.transactions.find(
 {"transactions.amount" : {$lt:5000}},
@@ -98,7 +98,7 @@ db.transactions.find(
 )
 ```
 
-## Query : Find transactions by account ID
+## Query : query to list down distinct list of products available in the system
 ```js
 db.accounts.distinct("products")
 ```
