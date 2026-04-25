@@ -1,19 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
 # Customer Accounts & Transactions Viewer
 
@@ -21,7 +5,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 This project is a simple React-based application built as part of an assessment.
 It displays **active customer details** and allows users to view **transactions linked to specific accounts**.
-
+This project was built as a frontend-focused assessment using static MongoDB sample data to simulate backend behavior.
 The app also includes **Google Authentication using Firebase** to restrict access.
 
 ---
@@ -139,7 +123,7 @@ UI is conditionally rendered:
 1. Clone the repository
 
 ```bash
-git clone <your-repo-link>
+git clone https://github.com/pragneshkalambe/milexp-assessment
 ```
 
 2. Install dependencies
@@ -160,6 +144,16 @@ npm run dev
 http://localhost:5173
 ```
 
+5. GitHub Repository
+```
+https://github.com/pragneshkalambe/milexp-assessment
+
+```
+
+6. Vercel Project Deployment Link
+```
+https://milexp-assessment.vercel.app/
+```
 ---
 
 ## Firebase Setup
@@ -179,7 +173,12 @@ http://localhost:5173
 * Basic UI styling is used (focus on functionality)
 
 ---
+## Key Highlights
 
+- Built using React functional components
+- State management using React hooks
+- Conditional rendering based on authentication state
+- Clean separation of UI and logic
 
 ## Author
 
