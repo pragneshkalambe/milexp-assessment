@@ -90,6 +90,19 @@ const transactionData = transactions.find(
 ```
 
 ---
+## Query : Transactions less than 5000
+```js
+db.transactions.find(
+{"transactions.amount" : {$lt:5000}},
+{_id:0,account_id:1}
+)
+```
+
+## Query : Find transactions by account ID
+```js
+db.accounts.distinct("products")
+```
+---
 
 ### 4. Displaying Transactions
 
