@@ -1,15 +1,16 @@
 import { initializeApp } from "firebase/app";
 import { getAuth,GoogleAuthProvider } from "firebase/auth";
+// import from "../"
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBfh06n2NbIv7jsBm-dpL4iTa59NbBj4rw",
-  authDomain: "mern-assignment-8abdf.firebaseapp.com",
-  projectId: "mern-assignment-8abdf",
-  storageBucket: "mern-assignment-8abdf.firebasestorage.app",
-  messagingSenderId: "819933367708",
-  appId: "1:819933367708:web:fee698ba3fcad0c86e4c59",
-  measurementId: "G-MYD9M4BF2X"
+apiKey: import.meta.env.VITE_API_KEY,
+authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+projectId: import.meta.env.VITE_PROJECT_ID,
+storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+appId: import.meta.env.VITE_APP_ID,
+measurementId: import.meta.env.VITE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
