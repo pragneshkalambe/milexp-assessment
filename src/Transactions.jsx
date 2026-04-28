@@ -18,22 +18,36 @@ function Transaction() {
     //     selectedAccount && selectedTransaction && (
     return (
         <div className='transactions'>
-            {/* ✅ Back Button */}
+            {/*  Back Button */}
             <button onClick={() => navigate("/")}>
                 ⬅ Back
             </button>
             <h3>Transactions for Account: {accountId}</h3>
-            {selectedTransaction && selectedTransaction.transactions.map((transaction) => (
+            <table className="table-auto">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Symbol</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
 
-                <div key={transaction.date}>
-                    <span>Date : {new Date(transaction.date).toLocaleDateString()} | </span>
-                    <span>Amount : {transaction.amount} | </span>
-                    <span>Type : {transaction.transaction_code} | </span>
-                    <span>Symbol : {transaction.symbol} | </span>
-                    <span>Price : {transaction.price} | </span>
-                    <span>Total : {transaction.total} | </span><hr />
-                </div>
-            ))}
+                <tbody>
+                    {selectedTransaction.transactions.map((transaction, index) => (
+                        <tr key={index}>
+                            <td>{new Date(transaction.date).toLocaleDateString()}</td>
+                            <td>{transaction.amount}</td>
+                            <td>{transaction.transaction_code}</td>
+                            <td>{transaction.symbol}</td>
+                            <td>{transaction.price}</td>
+                            <td>{transaction.total}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
 
         </div>
 
