@@ -19,6 +19,12 @@ The app also includes **Google Authentication using Firebase** to restrict acces
 * View transactions for selected account
 * Conditional rendering based on user interaction
 
+### (Updated)-------
+- Implemented routing using React Router
+- Dynamic navigation to transactions page using account ID
+- Fetched and displayed transactions using URL parameters (`useParams`)
+- Back navigation from transactions page to customers list
+
 ---
 
 ## Tech Stack
@@ -37,6 +43,19 @@ Customer and transaction data were taken from the provided sample dataset (Mongo
 ---
 
 ## ⚙️ Implementation Details
+---
+### Latest Updated -------
+## Technical Approach
+
+- Used React functional components and hooks (`useState`)
+- Implemented routing with `react-router-dom`
+- Used `useParams` to extract account ID from URL
+- Used `.find()` to match transactions based on account ID
+- Maintained clean separation of components:
+  - `MainApp.jsx` → Customer list
+  - `Transactions.jsx` → Transaction details
+- Firebase Authentication used for Google Sign-In
+---
 
 ### 1. Filtering Active Customers
 
@@ -165,6 +184,14 @@ https://milexp-assessment.vercel.app/
 * Allowed pop-ups in browser for localhost
 
 ---
+## Project Structure (Updated)---------
+
+src/
+├── MainApp.jsx
+├── Transactions.jsx
+├── firebase.js
+├── transactiondata.js
+├── App.jsx
 
 ## Main Goal Achieved
 
